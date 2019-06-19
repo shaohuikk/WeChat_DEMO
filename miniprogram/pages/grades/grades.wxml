@@ -1,0 +1,30 @@
+<view>
+<van-cell-group>
+<input placeholder="请输入学号" bindinput='input' />
+<van-button class='btn' size="normal" type="primary" bindtap="btnClick">查询</van-button>
+</van-cell-group>
+
+
+
+<view class="table1">
+  <view class="tr bg-w">
+    <view class="th">课程名称</view>
+    <view class="th">成绩</view>
+    <view class="th ">学分</view>
+  </view>
+  <block wx:for="{{grade_list}}">
+    <view wx:for="{{item.grade.bigthreeup}}" wx:for-index="idx" wx:for-item="btu">
+    <view class="tr" wx:if="{{index % 2 == 0}}">
+      <view class="td">{{btu.kemu}}</view>
+      <view class="td">{{btu.chengji}}</view>
+      <view class="td">{{btu.xuefen}}</view>
+    </view>
+    <view class="tr" wx:else>
+      <view class="td">{{item.code}}</view>
+      <view class="td">{{item.text}}</view>
+      <view class="td">{{item.date}}</view>
+    </view>
+    </view>
+  </block>
+</view>
+</view>

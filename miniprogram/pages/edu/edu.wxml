@@ -1,0 +1,39 @@
+<view class="body">
+  <view class="nav-bar">
+      <view bindtap="browsing" id="top" style="color: {{color.top}}">头条</view>
+      <view bindtap="browsing" id="shehui" style="color: {{color.shehui}}">社会</view>
+      <view bindtap="browsing" id="guonei" style="color: {{color.guonei}}">国内</view>
+      <view bindtap="browsing" id="guoji" style="color: {{color.guoji}}">国际</view>
+      <view bindtap="browsing" id="yule" style="color: {{color.yule}}">娱乐</view>
+      <view bindtap="browsing" id="tiyu" style="color: {{color.tiyu}}">体育</view>
+     <view bindtap="browsing" id="junshi" style="color: {{color.junshi}}">军事</view>
+      <view bindtap="browsing" id="keji" style="color: {{color.keji}}">科技</view>
+      <view bindtap="browsing" id="caijing" style="color: {{color.caijing}}">财经</view>
+      <view bindtap="browsing" id="shishang" style="color: {{color.shihang}}">时尚</view>
+  </view>
+  <view class="load" hidden="{{hidden}}">加载中...</view>
+  <scroll-view scroll-y="true" bindscrolltolower="loadmore" bindscrolltoupper="loadmore" class="news-container" style="height:{{scrollHeight}}px;">
+    <block wx:for="{{newslist}}" wx:for-item="newsItem">
+    <view wx:for="{{newsItem.data}}" wx:for-index="idx" wx:for-item="itemName">
+      <navigator url="/pages/edu/newdetail/news?contenturl={{itemName.url}}">
+        <view class="news-item">
+          <view class="text-img">
+            <view class="text">
+              <text>{{itemName.title}}</text>
+            </view>
+            <view class="img">
+              <image src="{{itemName.thumbnail_pic_s}}" mode="aspectFill"></image>
+              <image src="{{itemName.thumbnail_pic_s02}}" mode="aspectFill"></image>
+              <image src="{{itemName.thumbnail_pic_s03}}" mode="aspectFill"></image>
+            </view>
+          </view>
+          <view class="news-footer">
+            <text>{{itemItem.date}}</text>
+          </view>
+        </view>
+      </navigator>
+      </view>
+    </block>
+  </scroll-view>
+  <view class="load" hidden="{{hidden}}">加载中...</view>
+</view>

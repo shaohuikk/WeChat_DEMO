@@ -1,0 +1,27 @@
+<view class="container">
+  <view class="userinfo">
+    <block wx:if="{{!hasUserInfo && canIUse}}">
+      <button open-type="getUserInfo" bindgetuserinfo="getUserInfo"> 登录 </button>
+      <view class="hint">授权后才可正常使用相册功能</view>
+    </block>
+    <block wx:else>
+      <image class="userinfo-avatar" src="{{userInfo.avatarUrl}}" mode="cover"></image>
+      <text class="userinfo-nickname">{{userInfo.nickName}}</text>
+    </block>
+  </view>
+  <view class='panel'>
+    <navigator url='/pages/bind/bind'>
+      <view class='bd'>绑定</view>
+    </navigator>
+  </view>
+  <view class='papa'>
+    <navigator url='/pages/about/about'>
+      <view class='gy'>关于</view>
+    </navigator>
+  </view>
+  <view class='pbv'>
+     <navigator url='/pages/feedback/feedback'>
+      <view class='fk'>反馈</view>
+    </navigator>
+  </view>
+</view>

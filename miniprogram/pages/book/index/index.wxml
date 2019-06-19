@@ -1,0 +1,16 @@
+<view wx:for="{{book_list}}">
+<van-card
+  price="{{item.result.price}}"
+  desc="{{item.result.author}}"
+  title="{{item.result.title}}"
+  thumb="{{item.result.pic}}"
+  >
+  <view slot="tags">
+  <van-tag type="primary" plain>{{item.result.keyword}}</van-tag>
+  </view>
+    <view slot="footer">
+      <van-button data-id="{{item._id}}" size="small" type="primary" plain bind:click="viewItem">查看详情</van-button>
+      <van-button data-id="{{item._id}}" size="small" type="danger" plain bind:click="delete">删除信息</van-button>
+    </view>
+</van-card>
+</view>

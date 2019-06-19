@@ -1,0 +1,22 @@
+<view>
+    <view class="cover-container">
+        <image src="{{book.result.pic}}"></image>
+    </view>
+
+    <view class="book-meta">
+        <view class="meta-info">
+            <text class="book-title">{{book.result.title}}</text>
+            <text class="other-meta">作者：{{book.result.author}}</text>
+            <text class="other-meta">出版社：{{book.result.publisher}}</text>
+            <text class="other-meta">出版日期：{{book.result.pubdate}}</text>
+            <text class="other-meta">出版地址：{{book.result.pubplace}}</text>
+        </view>
+    </view>
+
+    <view class="book-intro">
+        <view class="intro-header"><text>简介</text></view>
+        <text class="intro-content">
+            {{book.result.summary}}
+        </text>
+    </view>
+</view>

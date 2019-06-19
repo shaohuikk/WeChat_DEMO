@@ -1,0 +1,23 @@
+<!--pages/more/more.wxml-->
+<view class='container'>
+<view class='cc'>
+    <navigator url='/pages/grades/grades'>
+      <view class='ccj'>查成绩</view>
+    </navigator>
+  </view>
+  <view class='jwxx'>
+    <navigator url='/pages/edu/edu'>
+      <view class='jw'>头条新闻</view>
+    </navigator>
+  </view>
+  <view class='s-book'>
+     <navigator url='/pages/book/book'>
+      <view class='book'>扫码加书</view>
+    </navigator>
+  </view>
+   <view class='book-list'>
+     <navigator url='/pages/book/index/index'>
+      <view class='book'>图书列表</view>
+    </navigator>
+  </view>
+</view>

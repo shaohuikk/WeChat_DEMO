@@ -1,0 +1,11 @@
+<view class="weui-article">
+    <view class="weui-article__section">
+        <view class="weui-article__h3">目前已知问题</view>
+        <view class="weui-article__p">课表和成绩需要输学号查询</view>
+        <view class="weui-article__p">有问题或建议欢迎反馈。</view>
+    </view>
+    <view class="weui-article__section">
+        <view class="weui-article__h3">感谢</view>
+        <view class="weui-article__p">尹贺老师的指导</view>
+    </view>
+</view>
